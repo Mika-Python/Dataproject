@@ -1,0 +1,22 @@
+{% extends "firstbook/base.html" %}
+{% load static %}
+
+{% block header %}
+            <!-- Bokeh CDN -->
+    <link href=”http://cdn.pydata.org/bokeh/release/bokeh-2.0.1.min.css" rel=”stylesheet” type=”text/css”>
+    <link href=”http://cdn.pydata.org/bokeh/release/bokeh-widgets-2.0.1.min.css" rel=”stylesheet” type=”text/css”>
+    <script src="https://cdn.bokeh.org/bokeh/release/bokeh-2.0.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.0.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-2.0.1.min.js" crossorigin="anonymous"></script>
+    {{ script | safe }}
+
+{% endblock %}
+
+{% block title %}Study rate graph{% endblock %}
+
+
+{% block content %}
+
+        <span class="mt-5">{{ div | safe}}</span>
+
+{% endblock %}

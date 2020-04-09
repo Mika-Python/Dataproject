@@ -1,0 +1,28 @@
+{% extends "firstbook/base.html" %}
+{% load static %}
+
+{% block header %}
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+
+{% endblock %}
+
+{% block title %}Study submission{% endblock %}
+
+{% block content %}
+
+    <h1 class="mt-5">Submit a new study</h1>
+
+    <div class="form-group">
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Add" class="btn btn-primary">
+        </form>
+
+    </div>
+{% endblock %}

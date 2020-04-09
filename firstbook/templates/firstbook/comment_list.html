@@ -1,0 +1,27 @@
+{% extends "firstbook/base.html" %}
+{% load static %}
+
+{% block title %}{{study | title}} : comment{% endblock %}
+
+{% block content %}
+    <h1 class="mt-5">Comments about {{study | title}} :</h1>
+    </br>
+        {% for i in list %}
+
+            <hr class="featurette-divider">
+
+                <div class="row featurette">
+                    <div class="col-md-7">
+                        <h2 class="featurette-heading">{{i.name|title}}</h2>
+                    <p class="lead">Rate : {{i.rate}} </p>
+                    <p class="lead">Commentaire : {{i.commentary}} </p>
+
+                </div>
+
+        {% endfor %}
+
+    </div>
+
+{% endblock %}
+
+

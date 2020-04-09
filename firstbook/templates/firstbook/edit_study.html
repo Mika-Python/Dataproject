@@ -1,0 +1,14 @@
+{% extends "firstbook/base.html" %}
+{% load static %}
+
+{% block title %}Study edition{% endblock %}
+
+{% block content %}
+    <div class="mt-5">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Save">
+        </form>
+    </div>
+{% endblock content %}

@@ -1,0 +1,17 @@
+{% extends "firstbook/base.html" %}
+{% load static %}
+
+{% block title %} Study deleted {% endblock %}
+
+{% block content %}
+
+
+    <hr class="featurette-divider">
+
+                <div class="row featurette">
+                    <div class="col-md-7">
+                        <h2 class="featurette-heading">Study has been deleted</h2>
+                        <a href="{% url 'study_list' %}" class="text-white bg-dark">Return to list</a>
+                    </div>
+                </div>
+{% endblock %}

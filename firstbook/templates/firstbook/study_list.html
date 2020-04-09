@@ -1,0 +1,31 @@
+{% extends "firstbook/base.html" %}
+
+{% load static %}
+
+{% block title %}Study list{% endblock %}
+
+{% block content %}
+<h1 class="mt-5">Study list :</h1>
+
+{% for i in list %}
+
+
+</br>
+
+    <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+
+            <h2 class="featurette-heading">{{i.name|title}} <span class="text-muted"> created on : {{i.date|title}}</span></h2>
+            <p class="lead"> Main purpose {{i.main_purpose|title}}</p>
+            <p>Users Rate: {{i.meanrate|title}}</p>
+
+            <a href="{% url 'comment_list' study=i.name %}" class="text-white bg-dark">See comments</a>
+            <a href="{% url 'patient_list' study=i.name %}" class="text-white bg-dark">Patients included</a>
+            <a href="{% url 'study_edit' study=i.name %}" class="text-white bg-dark">Edit this study</a>
+            <a href="{% url 'study_delete' study=i.name %}" class="text-white bg-danger">Delete this study</a>
+
+{% endfor %}
+
+{% endblock %}
