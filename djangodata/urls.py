@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', fb_views.homepage, name='homepage'),
     path('databook/', include('firstbook.urls')),
-    path('inclusion/', include('inclusions.urls'))
+    path('inclusion/', include('inclusions.urls')),
+    path('experiment/', include('experiment.urls')),
 ]

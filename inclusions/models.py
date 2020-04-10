@@ -67,4 +67,3 @@ class Inclusion(models.Model):
     study = models.ForeignKey(Study, on_delete=models.CASCADE)
     status = models.CharField(verbose_name="Inclusion", choices=STATUS_CHOICES, max_length=20)
     inclusion_date = models.DateField(verbose_name="Inclusion date")
-

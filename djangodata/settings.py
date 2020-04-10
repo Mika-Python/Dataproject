@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'firstbook.apps.FirstbookConfig',
     'inclusions.apps.InclusionsConfig',
+    'experiment.apps.ExperimentConfig',
 ]
 
 MIDDLEWARE = [
