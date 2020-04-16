@@ -13,3 +13,23 @@ class StudyExperiment(models.Model):
     experiment = models.ForeignKey(Experiment, on_delete=models.CASCADE)
     study = models.ForeignKey(Study, on_delete=models.CASCADE)
 
+
+class ResultString(models.Model):
+    result_name = models.CharField(max_length=50)
+    result = models.CharField(max_length=50)
+    experiment = models.ForeignKey(Experiment, on_delete=models.CASCADE)
+    patient = models.ForeignKey(Inclusion, models.CASCADE)
+
+
+class ResultNumber(models.Model):
+    result_name = models.CharField(max_length=50)
+    result = models.FloatField()
+    experiment = models.ForeignKey(Experiment, on_delete=models.CASCADE)
+    patient = models.ForeignKey(Inclusion, models.CASCADE)
+
+
+class ResultBool(models.Model):
+    result_name = models.CharField(max_length=50)
+    result = models.BooleanField()
+    experiment = models.ForeignKey(Experiment, on_delete=models.CASCADE)
+    patient = models.ForeignKey(Inclusion, models.CASCADE)
